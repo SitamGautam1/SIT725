@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Contact</h1>
+    <form action="/contact" method="POST">
+      <div class="input-field">
+        <input type="text" id="name" name="name" required>
+        <label for="name">Name</label>
+      </div>
+      <div class="input-field">
+        <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field">
+        <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+        <label for="message">Message</label>
+      </div>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
+</body>
+</html>
