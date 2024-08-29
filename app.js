@@ -25,8 +25,6 @@ const mainController = require('./controllers/mainController');
 
 // Define routes
 app.get('/', mainController.home);
-
-// Routes to render pages
 app.get('/login', (req, res) => res.render('login'));
 app.get('/signup', (req, res) => res.render('signup'));
 app.get('/contact', (req, res) => res.render('contact'));
@@ -38,7 +36,12 @@ app.post('/signup', mainController.signup);
 app.post('/contact', mainController.contact);
 app.post('/address', mainController.address);
 
+// Export the app for testing
+module.exports = app;
+
 // Start server
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+  });
+}

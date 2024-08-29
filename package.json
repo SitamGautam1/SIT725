@@ -1,18 +1,23 @@
 {
   "name": "myapp",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A simple Node.js app with MVC structure and testing using Mocha and Chai",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "mocha"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "ejs": "^3.1.10",
-    "express": "^4.19.2",
-    "mongoose": "^8.5.3"
+    "body-parser": "^1.19.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.7.3"
   }
 }
